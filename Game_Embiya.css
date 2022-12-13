@@ -42,3 +42,9 @@ button{
 .buttonpic{
 	background-repeat: no-repeat;
 }
+#Description{
+	text-align: center;
+	width: 30vw;
+	display: flex;
+	
+}
