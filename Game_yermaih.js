@@ -99,26 +99,28 @@ function start() {
   // reset ball if it goes past paddle (but only if we haven't already done so)
   if ( (ball.x > canvas.width) && !ball.resetting) {
     ball.resetting = true;
-    alert("player 1 scored");
+    alert("speler 1  heeft gescored");
 
     setTimeout(() => {
         ball.resetting = false;
         ball.x = canvas.width / 2;
         ball.y = canvas.height / 2;
-      }, 400);
+      }, 1000);
+
     }   
   
     
     if ( (ball.x < 0) && !ball.resetting) {
     ball.resetting = true;
-    alert("player 2 scored");
+    alert("speler 2  heeft gescored");
 
     // give some time for the player to recover before launching the ball again
     setTimeout(() => {
       ball.resetting = false;
       ball.x = canvas.width / 2;
       ball.y = canvas.height / 2;
-    }, 400);
+    }, 1000);
+  
   }
 
   // check to see if ball collides with paddle. if they do change x velocity

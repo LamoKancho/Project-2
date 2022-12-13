@@ -2,12 +2,14 @@ html, body {
     height: 100%;
     margin: 0;
   }
-
   body {
     background: black;
     display: flex;
     align-items: center;
     justify-content: center;
+    background-image: url(/JOJOS.jpg);
+    background-size:  cover;
+    background-repeat: no-repeat;
   }
   h1{
     color: snow;
