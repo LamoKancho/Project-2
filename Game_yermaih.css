@@ -9,3 +9,7 @@ html, body {
     align-items: center;
     justify-content: center;
   }
+  h1{
+    color: snow;
+    font-size: larger;
+  }

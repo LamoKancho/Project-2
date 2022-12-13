@@ -6,6 +6,8 @@ const maxPaddleY = canvas.height - grid - paddleHeight;
 
 var paddleSpeed = 6;
 var ballSpeed = 5;
+let scoreboard = 0-0;
+let beginscreen = "druk op enter om te beginnen";
 
 const leftPaddle = {
   // start in the middle of the game on the left side
@@ -13,7 +15,7 @@ const leftPaddle = {
   y: canvas.height / 2 - paddleHeight / 2,
   width: grid,
   height: paddleHeight,
-  
+
   // paddle velocity
   dy: 0
 };
@@ -95,9 +97,21 @@ function start() {
   }
 
   // reset ball if it goes past paddle (but only if we haven't already done so)
-  if ( (ball.x < 0 || ball.x > canvas.width) && !ball.resetting) {
-    // ball.resetting = true;
-    alert("player")
+  if ( (ball.x > canvas.width) && !ball.resetting) {
+    ball.resetting = true;
+    alert("player 1 scored");
+
+    setTimeout(() => {
+        ball.resetting = false;
+        ball.x = canvas.width / 2;
+        ball.y = canvas.height / 2;
+      }, 400);
+    }   
+  
+    
+    if ( (ball.x < 0) && !ball.resetting) {
+    ball.resetting = true;
+    alert("player 2 scored");
 
     // give some time for the player to recover before launching the ball again
     setTimeout(() => {
@@ -110,6 +124,7 @@ function start() {
   // check to see if ball collides with paddle. if they do change x velocity
   if (collides(ball, leftPaddle)) {
     ball.dx *= -1;
+    ballSpeed + 5;
 
     // move ball next to the paddle otherwise the collision will happen again
     // in the next frame
@@ -117,7 +132,7 @@ function start() {
   }
   else if (collides(ball, rightPaddle)) {
     ball.dx *= -1;
-
+    ballSpeed + 5;
     // move ball next to the paddle otherwise the collision will happen again
     // in the next frame
     ball.x = rightPaddle.x - ball.width;
@@ -170,7 +185,7 @@ document.addEventListener('keyup', function(e) {
   }
 });
 
-// start the game
+// begin het spel
 document.addEventListener("keydown", function(e){
     if (e.which === 13){
         requestAnimationFrame(start);
