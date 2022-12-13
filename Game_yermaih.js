@@ -1,4 +1,5 @@
 const canvas = document.getElementById('game');
+// const leftPaddle = document.getElementById('player1');
 const context = canvas.getContext('2d');
 const grid = 15;
 const paddleHeight = grid * 5; // 80

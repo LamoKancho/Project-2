@@ -15,3 +15,9 @@ html, body {
     color: snow;
     font-size: larger;
   }
+  #speler1{
+    background-image: url(/Jotaro.png);
+  }
+  #speler2{
+    background-image: url(flappy.png);
+  }
