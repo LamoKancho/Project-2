@@ -1,14 +1,16 @@
 .grid {
-	width: 606px;
-	height: 606px;
+	width: 460px;
+	height: 460px;
 	display: flex;
 	flex-wrap: wrap;
+	
 }
-
 .square {
-	height: 200px;
-	width: 200px;
+	height: 150px;
+	width: 150px;
 	border: solid black 1px;
+	background-color: white;
+	opacity: 0.8;
 }
 
 .mole {
@@ -16,7 +18,27 @@
 	background-size: cover;
 }
 #Game {
-	border: solid black 3px;
+	display: flex;
 	padding: 0;
 	margin: 0;
+	justify-content: center;
+	align-content: center;
+}
+h2{
+	text-align: center;
+	color: white;
+	text-shadow: 1px 1px 2px red, 0 0 1em blue, 0 0 0.2em blue;
+}
+html{
+	background-image: url("JOJOS.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+button{
+	background-image: url("GOLDEXPERIENCE.jpg");
+	overflow: hidden;
+
+}
+.buttonpic{
+	background-repeat: no-repeat;
 }
