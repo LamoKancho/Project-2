@@ -10,6 +10,8 @@ html, body {
     background-image: url(/JOJOS.jpg);
     background-size:  cover;
     background-repeat: no-repeat;
+    height: 100vh;
+    width: 100vw;
   }
   h1{
     color: snow;
@@ -20,4 +22,15 @@ html, body {
   }
   #speler2{
     background-image: url(flappy.png);
+  }
+  .message{
+  position: fixed;
+	z-index: 10;
+	height: 10vh;
+	font-size: 10vh;
+	font-weight: 100;
+	color: blue;
+	top: 12vh;
+	left: 20vw;
+	text-align: center;
   }

@@ -10,6 +10,13 @@ var ballSpeed = 5;
 let scoreboard = 0-0;
 let beginscreen = "druk op enter om te beginnen";
 
+let score_val =
+	document.querySelector('.score_val');
+let message =
+	document.querySelector('.message');
+let score_title =
+	document.querySelector('.score_title');
+
 const leftPaddle = {
   // start in the middle of the game on the left side
   x: grid * 2,
@@ -58,7 +65,7 @@ function collides(obj1, obj2) {
 function start() {
   requestAnimationFrame(start);
   context.clearRect(0,0,canvas.width,canvas.height);
-
+  
   // move paddles by their velocity
   leftPaddle.y += leftPaddle.dy;
   rightPaddle.y += rightPaddle.dy;
@@ -192,6 +199,7 @@ document.addEventListener('keyup', function(e) {
 document.addEventListener("keydown", function(e){
     if (e.which === 13){
         requestAnimationFrame(start);
+        message.innerHTML = '';
     }
 })
 
