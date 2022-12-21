@@ -1,51 +1,57 @@
-<!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Menu</title>
-  <link rel="stylesheet" href="Menu.css">
-</head>
-<header>
-  <nav>
-    <ul>
-      <li><a href="Homepage.html">Home</a></li> 
-      <li>
-        <a href="#0">Embiya</a>
-        <ul>
-          <li><a href="#0">Portfolio</a></li>
-          <li><a href="#0">Favoriete game</a></li>
-          <li><a href="Game_Embiya.html">Game</a></li>
-        </ul>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"/>
+    <link rel="stylesheet" href="Menu.css" />
+    <title>dropdown Menu</title>
+  </head>
+  <body>
+    <div class="menu-bar">
+      <ul>
+
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Embiya <i class="fas fa-caret-down"></i></a>
+            <div class="dropdown-menu">
+                <ul>
+                  <li><a href="#">Portfolio</a></li>
+                  <li><a href="#">Favoriete games</a></li>
+                  <li><a href="Game_Embiya.html">Game</a></li>
+                </ul>
+              </div>
+        </li>
+        
+        <li><a href="#">Emre <i class="fas fa-caret-down"></i></a>
+          <div class="dropdown-menu">
+              <ul>
+                <li><a href="#">Portfolio</a></li>
+                <li><a href="#">Favoriete games</a></li>
+                <li><a href="#">Game</a></li>
+              </ul>
+            </div>
       </li>
-      <li>
-        <a href="#0">Emre</a>
-        <ul>
-          <li><a href="#0">Portfolio</a></li>
-          <li><a href="#0">Favoriete game</a></li>
-          <li><a href="#0">Game</a></li>
-        </ul>
+
+      <li><a href="#">Erik <i class="fas fa-caret-down"></i></a>
+        <div class="dropdown-menu">
+            <ul>
+              <li><a href="#">Portfolio</a></li>
+              <li><a href="#">Favoriete games</a></li>
+              <li><a href="#">Game</a></li>
+            </ul>
+          </div>
+    </li>
+
+    <li><a href="#">Yermaih<i class="fas fa-caret-down"></i></a>
+      <div class="dropdown-menu">
+          <ul>
+            <li><a href="#">Portfolio</a></li>
+            <li><a href="#">Favoriete games</a></li>
+            <li><a href="#">Game</a></li>
+          </ul>
+        </div>
       </li>
-      <li>
-        <a href="#0">Erik</a>
-        <ul>
-          <li><a href="#0">Portfolio</a></li>
-          <li><a href="#0">Favoriete game</a></li>
-          <li><a href="/Game_Erik.html">Game</a></li>
-        </ul>
-      </li>
-      <li>
-        <a href="#0">Yermaih</a>
-        <ul>
-          <li><a href="#0">Portfolio</a></li>
-          <li><a href="#0">Favoriete game</a></li>
-          <li><a href="/Game_yermaih.html">Game</a></li>
-        </ul>
-      </li>
-  </nav>
-</header>
-<body>
-  
-</body>
+
+      </ul>
+    </div>
+  </body>
 </html>
