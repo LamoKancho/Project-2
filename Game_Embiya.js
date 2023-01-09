@@ -8,6 +8,8 @@ let hitPosition
 let currentTime = 10
 let timerId = null
 
+function start() {
+
 function randomSquare() {
   squares.forEach(square => {
     square.classList.remove('mole')
@@ -48,3 +50,11 @@ function countDown() {
 }
 
 let countDownTimerId = setInterval(countDown, 1000)
+
+
+}
+document.addEventListener("keydown", function(e){
+  if (e.which === 13){
+      start();
+  }
+})
