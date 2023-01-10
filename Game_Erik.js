@@ -2,7 +2,7 @@
 let move_speed = 10;
 	
 // Gravity constant value
-let gravity = 0.4;
+let gravity = 0.12;
 	
 // Getting reference to the bird element 
 let bird = document.querySelector('.bird');
@@ -128,7 +128,7 @@ requestAnimationFrame(apply_gravity);
 let pipe_seperation = 0;
 	
 // Constant value for the gap between two pipes
-let pipe_gap = 20;
+let pipe_gap = 50;
 function create_pipe() {
 	if (game_state != 'Play') return;
 	
