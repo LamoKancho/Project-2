@@ -7,8 +7,8 @@ const maxPaddleY = canvas.height - grid - paddleHeight;
 
 var paddleSpeed = 6;
 var ballSpeed = 5;
-let scoreboard = 0-0;
-let beginscreen = "druk op enter om te beginnen";
+// let scoreboard = (score1)-(score2);
+// let beginscreen = "druk op enter om te beginnen";
 
 let score_val =
 	document.querySelector('.score_val');
@@ -108,6 +108,7 @@ function start() {
   if ( (ball.x > canvas.width) && !ball.resetting) {
     ball.resetting = true;
     alert("speler 1  heeft gescored");
+    // score1 ++;
 
     setTimeout(() => {
         ball.resetting = false;
@@ -121,6 +122,7 @@ function start() {
     if ( (ball.x < 0) && !ball.resetting) {
     ball.resetting = true;
     alert("speler 2  heeft gescored");
+    // score2 ++;
 
     // give some time for the player to recover before launching the ball again
     setTimeout(() => {
@@ -200,8 +202,15 @@ document.addEventListener("keydown", function(e){
     if (e.which === 13){
         requestAnimationFrame(start);
         message.innerHTML = '';
+        score_title.innerHTML = 'Score : ';
+        score_val.innerHTML = '0';
     }
 })
+document.addEventListener("keydown", function(e){
+  if (e.which === 13){
+    document.body.style.background = "url('img/gojo-vs-miguel-gojo-jjk0.gif') no-repeat";   
+    document.body.style.backgroundSize = "cover"
+  }})
 
 document.addEventListener("keydown", function(event) {
     console.log(event.which);

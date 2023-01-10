@@ -7,21 +7,25 @@ html, body {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-image: url(/JOJOS.jpg);
+    background-image: url(/img/gojo.gif);
     background-size:  cover;
     background-repeat: no-repeat;
     height: 100vh;
     width: 100vw;
   }
   h1{
-    color: snow;
-    font-size: larger;
+    /* color: snow;
+    font-size: larger; */
   }
   #speler1{
-    background-image: url(/Jotaro.png);
+    background-image: url(img/Jotaro.png);
+    height:  50px;
+    width:  50px;
   }
   #speler2{
-    background-image: url(flappy.png);
+    background-image: url(img/flappy.png);
+    height: 50px;
+    width: 50px;
   }
   .message{
   position: fixed;
@@ -33,4 +37,18 @@ html, body {
 	top: 12vh;
 	left: 20vw;
 	text-align: center;
+  }
+  .score {
+    position: fixed;
+    z-index: 10;
+    height: 10vh;
+    font-size: 10vh;
+    font-weight: 100;
+    color: red;
+    top: 0;
+    left: 0;
+  }
+  
+  .score_val {
+    color: black;
   }
