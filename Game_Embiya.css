@@ -3,7 +3,6 @@
 	height: 460px;
 	display: flex;
 	flex-wrap: wrap;
-	
 }
 .square {
 	height: 150px;
@@ -42,9 +41,7 @@ button{
 .buttonpic{
 	background-repeat: no-repeat;
 }
-#Description{
+.Description{
 	text-align: center;
-	width: 30vw;
-	display: flex;
-	
+	width: 40vw;
 }

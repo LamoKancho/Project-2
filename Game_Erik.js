@@ -1,8 +1,8 @@
 // Background scrolling speed
-let move_speed = 5;
+let move_speed = 6;
 	
 // Gravity constant value
-let gravity = 0.25;
+let gravity = 0.15;
 	
 // Getting reference to the bird element 
 let bird = document.querySelector('.bird');
@@ -128,7 +128,7 @@ requestAnimationFrame(apply_gravity);
 let pipe_seperation = 0;
 	
 // Constant value for the gap between two pipes
-let pipe_gap = 50;
+let pipe_gap = 20;
 function create_pipe() {
 	if (game_state != 'Play') return;
 	

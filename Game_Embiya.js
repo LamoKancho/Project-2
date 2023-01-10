@@ -7,6 +7,7 @@ let result = 0
 let hitPosition
 let currentTime = 10
 let timerId = null
+let presq = 10
 
 function start() {
 
