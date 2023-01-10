@@ -1,5 +1,5 @@
 // Background scrolling speed
-let move_speed = 6;
+let move_speed = 10;
 	
 // Gravity constant value
 let gravity = 0.12;

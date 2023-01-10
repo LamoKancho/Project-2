@@ -10,10 +10,11 @@
 	border: solid black 1px;
 	background-color: white;
 	opacity: 0.8;
+	z-index: 0;
 }
 
 .mole {
-	background-image: url("Jotaro.png");
+	background-image: url("img/Jotaro.png");
 	background-size: cover;
 }
 #Game {
@@ -29,12 +30,12 @@ h2{
 	text-shadow: 1px 1px 2px red, 0 0 1em blue, 0 0 0.2em blue;
 }
 html{
-	background-image: url("JOJOS.jpg");
+	background-image: url("img/JOJOS.jpg");
 	background-repeat: no-repeat;
 	background-size: cover;
 }
 button{
-	background-image: url("GOLDEXPERIENCE.jpg");
+	background-image: url("img/GOLDEXPERIENCE.jpg");
 	overflow: hidden;
 
 }
