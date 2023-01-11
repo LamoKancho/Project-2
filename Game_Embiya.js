@@ -6,28 +6,39 @@ const score = document.querySelector('#score')
 let result = 0
 let hitPosition
 let currentTime = 10
+let hitPositionOld
 let timerId = null
-let presq = 10
 
 function start() {
 
 function randomSquare() {
-  squares.forEach(square => {
-    square.classList.remove('mole')
-  })
 
-  let randomSquare = squares[Math.floor(Math.random() * 9)]
-  randomSquare.classList.add('mole')
-
-  hitPosition = randomSquare.id
+  do {
+    squares.forEach(square => {
+      square.classList.remove('mole')
+    })
+  
+      let randomSquare = squares[Math.floor(Math.random() * 9)]
+      
+      
+      hitPosition = randomSquare.id
+      randomSquare.classList.add('mole')
+  } while (hitPositionOld == hitPosition);
+  
+  hitPositionOld = hitPosition
+  
+  
 }
+
+//   let randomSquare = squares[Math.floor(Math.random() * 9)]
+//   randomSquare.classList.add('mole')
 
 squares.forEach(square => {
   square.addEventListener('mousedown', () => {
     if (square.id == hitPosition) {
       result++
       // score.textContent = result
-      hitPosition = null
+    //   hitPosition = null
     }
   })
 })
@@ -54,8 +65,3 @@ let countDownTimerId = setInterval(countDown, 1000)
 
 
 }
-document.addEventListener("keydown", function(e){
-  if (e.which === 13){
-      start();
-  }
-})
