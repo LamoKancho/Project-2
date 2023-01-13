@@ -1,0 +1,31 @@
+/* *{
+    border: solid;
+} */
+
+.normaal{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    /* align-content: center; */
+    height: 70vh;
+    width: 100%;
+    background-color: green;
+}
+footer{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    height: 19vh;
+    width: 100vw;
+    background-color: blue;
+    color: snow
+}
+
+/* h1{
+    width: 10vw;
+    height: 3vh;
+}
+p{
+    width: 10vw;
+    height: 3vh;
+} */
