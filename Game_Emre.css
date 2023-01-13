@@ -1,0 +1,150 @@
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+  }
+  
+  body {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: center;
+	min-height: 100vh;
+	font-family: arial;
+	background: #ff0582;
+	background-image: linear-gradient(to top left, #00ab1d, #c0b307, #1608ab);
+	position: relative;
+	text-align: center;
+  }
+  
+  /* title */
+  header {
+	text-align: center;
+	font-size: 32px;
+	letter-spacing: 10px;
+	padding: 20px 10px;
+	color: rgb(255, 255, 255);
+  }
+  
+  /* main table */
+  .snakeTable {
+	width: 210px;
+	height: 230px;
+	margin: auto;
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-start;
+	flex-wrap: wrap;
+	box-shadow: 0 0 1px 2px rgba(187, 12, 12, 0.53);
+  }
+  @media only screen and (min-width: 768px) {
+	.snakeTable {
+	  width: 315px;
+	  height: 345px;
+	}
+  }
+  
+  /* all boxes in the table */
+  .box {
+	background: rgba(70, 9, 255, 0.709);
+	border: solid 1px #fcfcfc00;
+	width: 10px;
+	height: 10px;
+  }
+  @media only screen and (min-width: 768px) {
+	.box {
+	  width: 15px;
+	  height: 15px;
+	}
+  }
+  
+  .food {
+	background: #bc0f0f;
+  }
+  
+  .snake {
+	background: #dbd10a;
+  }
+  
+  /* bar showing status below table */
+  .status {
+	background: rgb(147, 13, 13);
+	color: #27039d;
+	border: solid 1px #072b24;
+	width: 210px;
+	height: 20px;
+  }
+  @media only screen and (min-width: 768px) {
+	.status {
+	  width: 315px;
+	  height: 30px;
+	}
+  }
+  
+  .score {
+	float: right;
+	padding: 0 5px;
+	line-height: 20px;
+  }
+  @media only screen and (min-width: 768px) {
+	.score {
+	  padding: 0 10px;
+	  line-height: 30px;
+	  font-size: 20px;
+	}
+  }
+  
+  .hidden {
+	display: none !important;
+  }
+  
+  /* modular window before and after game */
+  .modul {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	position: fixed;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+	background: rgba(174, 2, 2, 0);
+	text-align: center;
+  }
+  .start {
+	background: rgba(256,256,256,1);
+	padding: 60px;
+	box-shadow: 0 0 2px 3px rgba(0,0,0,0.3);
+	border-radius: 2px;
+  }
+  .start span {
+	color: #16a085;
+	border: 1px solid;
+	border-radius: 2px;
+	padding: 10px 20px;
+	font-size: 20px;
+	cursor: pointer;
+  }
+  .start span:hover {
+	background: #bb077c;
+	color: rgba(178, 0, 142, 0);
+  }
+  
+  footer {
+	padding: 5px;
+	color: rgb(40, 8, 8);
+	font-size: 14px;
+  }
+  
+  footer a {
+	color: rgb(132, 3, 3);
+	text-decoration: none;
+  }
+  
+  footer a:hover {
+	color: rgb(172, 1, 1);
+	text-decoration: underline;
+  }
+  
