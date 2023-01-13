@@ -1,19 +1,19 @@
-// Background scrolling speed
-let move_speed = 10;
+//snelheid van knuckle
+let move_speed = 5;
 	
-// Gravity constant value
+//gravity van knuckle
 let gravity = 0.12;
 	
-// Getting reference to the bird element 
+
 let bird = document.querySelector('.bird');
 	
-// Getting bird element properties
+
 let bird_props = bird.getBoundingClientRect();
 let background =
 	document.querySelector('.background')
 			.getBoundingClientRect();
 	
-// Getting reference to the score element
+
 let score_val =
 	document.querySelector('.score_val');
 let message =
@@ -21,13 +21,12 @@ let message =
 let score_title =
 	document.querySelector('.score_title');
 	
-// Setting initial game state to start
 let game_state = 'Start';
 	
-// Add an eventlistener for key presses
+
 document.addEventListener('keydown', (e) => {
 	
-// Start the game if enter key is pressed
+
 if (e.key == 'Enter' &&
 	game_state != 'Play') {
 	document.querySelectorAll('.pipe_sprite')
@@ -44,23 +43,21 @@ if (e.key == 'Enter' &&
 });
 function play() {
 function move() {
-	
-	// Detect if game has ended
+
 	if (game_state != 'Play') return;
 	
-	// Getting reference to all the pipe elements
+  
 	let pipe_sprite = document.querySelectorAll('.pipe_sprite');
 	pipe_sprite.forEach((element) => {
 		
 	let pipe_sprite_props = element.getBoundingClientRect();
 	bird_props = bird.getBoundingClientRect();
 		
-	// Delete the pipes if they have moved out
-	// of the screen hence saving memory
+
 	if (pipe_sprite_props.right <= 0) {
 		element.remove();
 	} else {
-		// Collision detection with bird and pipes
+	
 		if (
 		bird_props.left < pipe_sprite_props.left +
 		pipe_sprite_props.width &&
@@ -72,15 +69,13 @@ function move() {
 		bird_props.height > pipe_sprite_props.top
 		) {
 			
-		// Change game state and end the game
-		// if collision occurs
+
 		game_state = 'End';
 		message.innerHTML = 'Press Enter To Restart';
 		message.style.left = '28vw';
 		return;
 		} else {
-		// Increase the score if player
-		// has the successfully dodged the
+	
 		if (
 			pipe_sprite_props.right < bird_props.left &&
 			pipe_sprite_props.right +
@@ -109,8 +104,7 @@ function apply_gravity() {
 	}
 	});
 
-	// Collision detection with bird and
-	// window top and bottom
+
 
 	if (bird_props.top <= 0 ||
 		bird_props.bottom >= background.bottom) {
@@ -127,25 +121,23 @@ requestAnimationFrame(apply_gravity);
 
 let pipe_seperation = 0;
 	
-// Constant value for the gap between two pipes
+//grote tussen de pijp
 let pipe_gap = 50;
 function create_pipe() {
 	if (game_state != 'Play') return;
 	
-	// Create another set of pipes
-	// if distance between two pipe has exceeded
-	// a predefined value
+	
 	if (pipe_seperation > 115) {
 	pipe_seperation = 0
 		
-	// Calculate random position of pipes on y axis
+	
 	let pipe_posi = Math.floor(Math.random() * 43) + 8;
 	let pipe_sprite_inv = document.createElement('div');
 	pipe_sprite_inv.className = 'pipe_sprite';
 	pipe_sprite_inv.style.top = pipe_posi - 70 + 'vh';
 	pipe_sprite_inv.style.left = '100vw';
 		
-	// Append the created pipe element in DOM
+	
 	document.body.appendChild(pipe_sprite_inv);
 	let pipe_sprite = document.createElement('div');
 	pipe_sprite.className = 'pipe_sprite';
@@ -153,7 +145,7 @@ function create_pipe() {
 	pipe_sprite.style.left = '100vw';
 	pipe_sprite.increase_score = '1';
 		
-	// Append the created pipe element in DOM
+
 	document.body.appendChild(pipe_sprite);
 	}
 	pipe_seperation++;
