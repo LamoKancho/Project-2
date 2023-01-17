@@ -7,8 +7,11 @@ html, body {
     margin-top: 0%;
     padding-top: 0%;
     height: 100vh;
-    width: vw;
+    /* width: 100vw; */
      
+  }
+  header{
+    width: 100vw;
   }
   body {
     background: black;
@@ -69,10 +72,13 @@ html, body {
     font-size: 10vh;
     font-weight: 100;
     color: red;
-    top: 0;
+    top: 10%;
     left: 0;
   }
   
   .score_val {
+    color: black;
+  }
+  .score_val2{
     color: black;
   }

@@ -7,11 +7,16 @@ const maxPaddleY = canvas.height - grid - paddleHeight;
 
 var paddleSpeed = 6;
 var ballSpeed = 5;
+// let puntpunt = ':'
+// let score1 = 0;
+// let score2 = 0;
 // let scoreboard = (score1)-(score2);
 // let beginscreen = "druk op enter om te beginnen";
 
 let score_val =
 	document.querySelector('.score_val');
+let score_val2 =
+	document.querySelector('.score_val2');  
 let message =
 	document.querySelector('.message');
 let score_title =
@@ -65,6 +70,7 @@ function collides(obj1, obj2) {
 function start() {
   requestAnimationFrame(start);
   context.clearRect(0,0,canvas.width,canvas.height);
+
   
   // move paddles by their velocity
   leftPaddle.y += leftPaddle.dy;
@@ -107,8 +113,9 @@ function start() {
   // reset ball if it goes past paddle (but only if we haven't already done so)
   if ( (ball.x > canvas.width) && !ball.resetting) {
     ball.resetting = true;
-    alert("speler 1  heeft gescored");
+    alert("speler 1  heeft gescoord");
     // score1 ++;
+    score_val.innerHTML = +score_val.innerHTML + 1;
 
     setTimeout(() => {
         ball.resetting = false;
@@ -120,8 +127,9 @@ function start() {
   
     if ( (ball.x < 0) && !ball.resetting) {
     ball.resetting = true;
-    alert("speler 2  heeft gescored");
+    alert("speler 2  heeft gescoord");
     // score2 ++;
+    score_val2.innerHTML = +score_val2.innerHTML + 1;
 
     // give some time for the player to recover before launching the ball again
     setTimeout(() => {
@@ -201,8 +209,9 @@ document.addEventListener("keydown", function(e){
     if (e.which === 13){
         requestAnimationFrame(start);
         message.innerHTML = '';
-        score_title.innerHTML = 'Score : ';
+        score_title.innerHTML = 'Score', score_val.innerHTML, score_val2.innerHTML;
         score_val.innerHTML = '0';
+        score_val2.innerHTML = '0';
     }
 })
 document.addEventListener("keydown", function(e){
