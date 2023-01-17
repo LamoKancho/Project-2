@@ -118,7 +118,6 @@ function start() {
 
     }   
   
-    
     if ( (ball.x < 0) && !ball.resetting) {
     ball.resetting = true;
     alert("speler 2  heeft gescored");
@@ -209,7 +208,7 @@ document.addEventListener("keydown", function(e){
 document.addEventListener("keydown", function(e){
   if (e.which === 13){
     document.body.style.background = "url('img/gojo-vs-miguel-gojo-jjk0.gif') no-repeat";   
-    document.body.style.backgroundSize = "cover"
+    document.body.style.backgroundSize = "cover";
   }})
 
 document.addEventListener("keydown", function(event) {
