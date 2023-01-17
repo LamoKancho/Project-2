@@ -1,0 +1,23 @@
+body{
+    background-color: purple;
+    color: snow;
+    height: 100vh;
+    overflow-y: hidden; 
+}
+#img1{
+
+}
+#img2{
+
+}
+.stuff{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 100vh;
+    width: 100vw;
+}
+.img{
+    height: 90vh;
+    width: 50vw;
+}
