@@ -1,17 +1,41 @@
 html, body {
-    height: 100%;
-    margin: 0;
+    /* height: 100%; */
+    /* margin: 0; */
+  }
+  .werkevenkutmenu{
+    position: sticky;
+    margin-top: 0%;
+    padding-top: 0%;
+    height: 100vh;
+    width: vw;
+     
   }
   body {
     background: black;
-    display: flex;
+    display: flex; 
     align-items: center;
     justify-content: center;
+    margin-top: 0vh; 
     background-image: url(img/gojo.gif);
     background-size:  cover;
     background-repeat: no-repeat;
     height: 100vh;
-    width: 100vw;
+    width: 99vw;
+  }
+  .gifding{
+   
+ }
+  .game{
+    /* background: black;*/
+    display: flex; 
+    align-items: center;
+    justify-content: center;
+    /*margin-top: 0vh; 
+    background-image: url(img/gojo.gif);
+    background-size:  cover;
+    background-repeat: no-repeat; */
+    height: 100vh;
+    width: 99vw; 
   }
   h1{
     /* color: snow;
@@ -35,7 +59,7 @@ html, body {
 	font-weight: 100;
 	color: blue;
 	top: 12vh;
-	left: 20vw;
+	/* left: 10vw; */
 	text-align: center;
   }
   .score {
