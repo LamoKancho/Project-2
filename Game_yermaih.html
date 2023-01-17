@@ -4,15 +4,16 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="Game_yermaih.css">
+    <link rel="stylesheet" href="Menu.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"/>
-    <link rel="stylesheet" href="Menu.css" />
+    <link rel="stylesheet" href="Game_yermaih.css">
+   
+    
     <title>very easy pong</title>
 </head>
-<header>
-    
-</header>
-<body onload="beginscreen()"><div class="menu-bar">
+<body >
+<section class="werkevenkutmenu">
+  <div class="menu-bar">
     <ul>
 
       <li><a href="Homepage.html">Home</a></li>
@@ -46,10 +47,10 @@
         </div>
   </li>
 
-  <li><a href="Game_yermaih.html">Yermaih<i class="fas fa-caret-down"></i></a>
+  <li><a href="yermaihhome.html">Yermaih<i class="fas fa-caret-down"></i></a>
     <div class="dropdown-menu">
         <ul>
-          <li><a href="#">Portfolio</a></li>
+          <li><a href="port_yermaih.html">Portfolio</a></li>
           <li><a href="#">Favoriete games</a></li>
           <li><a href="Game_yermaih.html">Game</a></li>
         </ul>
@@ -58,18 +59,23 @@
 
     </ul>
   </div>
-
+</section>
+  
+<section class="game" onload="beginscreen()">
     <canvas width="750" height="585" id="game"></canvas>
     <div id="speler1"></div>
     <div id="speler2"></div>
     <div class="message">
-        press enter to start
-    </div>
+      
+      welkom bij mijn game. Dit spel  heet pong, hier sla je een bal heen en weer tot dat iemand een goal scoord.
+      de controls zijn simpel, speler 1 gebruikt W/S en speler 2 gebruikt PGUP/PGDN.
+  </div>
     <div class="score">
         <span class="score_title"></span>
         <span class="score_val"></span>
     </div>
     <!-- <div id="bg2"> <img src="img/gojo-vs-miguel-gojo-jjk0.gif"> </div> -->
     <script src="Game_yermaih.js"></script>
+  </section>
 </body>
 </html>
