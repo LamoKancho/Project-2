@@ -1,10 +1,7 @@
 /* *{
     border: solid;
 } */
-#homepicsimg{
-    width: 20vw;
-    height: 40vh;
-}
+
 .normaal{
     display: flex;
     flex-direction: row;
