@@ -1,0 +1,10 @@
+body{
+    background-color:  hwb(151 22% 23%);
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-direction: column;
+}
