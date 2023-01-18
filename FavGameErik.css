@@ -1,0 +1,16 @@
+*{
+    margin: 0%;
+    padding: 0%
+}
+
+#uitleg{
+    display: flex;
+    align-content: center;
+    justify-content: center;
+}
+
+#fg{
+    display: flex;
+    align-content: center;
+    justify-content: center;
+}
