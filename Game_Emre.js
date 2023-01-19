@@ -1,15 +1,18 @@
 
-// ADD time?
 
 var snakeTable = document.querySelector(".snakeTable");
 var boxes = document.getElementsByClassName("box");
 var modul = document.querySelector(".modul");
 var start = document.querySelector(".start");
 
+// grootte van speelveld
+
 var table = {
   rowsCols: 21,
   boxes: 21*21
 };
+
+// variabele snake 
 
 var snake = {
   direction: "right",
@@ -34,6 +37,7 @@ var snake = {
 };
 
 // init game
+
 snake.init();
 
 start.addEventListener("click", startSnake);
@@ -45,19 +49,23 @@ document.addEventListener("keydown", function(e) {
 });
 
 // start game
+
 function startSnake() {
   modul.classList.add("hidden");
-  // clearInterval(checkPageInterval);
+  // clearInterval  
+
   snake.time = 1;
   renderSnake();
   randomFood();
-  // interval, heart of the game
+  // hart van game (waardoor het werkt)
+
   setInt = setInterval(function() {
     move();
   }, snake.interval);
 }
 
-// end of game
+// einde game
+
 function stopp() {
   clearInterval(setInt);
   snake.final = snake.score;
@@ -69,13 +77,16 @@ function stopp() {
   modul.classList.remove("hidden");
 }
 
-// move the snake function
+// hoe snake bestuurd wordt
+
 function move() {
-  // check if move allowed & then eat food
+  // hoe snake beweegt en food eet
+
   hitFood();
   hitBorder();
   hitSnake();
-  // actually move the snake
+  // het bewegen vaqn de snake
+
   updatePositions();
   renderSnake();
   document.addEventListener("keydown", turn);
@@ -83,10 +94,12 @@ function move() {
 }
 
 function updatePositions() {
-  // remove last snake part (first snake pos)
+  // verwijderen van het laatste gedeelte van de snake
+
   boxes[snake.position[0][0] + snake.position[0][1] * table.rowsCols].classList.remove("snake");
   snake.position.shift();
-  // add new snake part
+  // een gedeelte (dus een blokje) toevoegen aan lichaam van snake
+
   var head = snake.position[snake.position.length - 1];
   switch (snake.direction) {
     case "left":
@@ -106,28 +119,30 @@ function updatePositions() {
   }
 }
 
-// checks border contact
+// wat gebeurt er met de snake als hij de border aanraakt (hij gaat dood)
 function hitBorder() {
   var headPos = snake.position.length-1;
-  // goes of limits
+  // limiet
   if (((snake.position[headPos][0] === table.rowsCols-1) && (snake.direction === "right")) || ((snake.position[headPos][0] === 0) && (snake.direction === "left")) || ((snake.position[headPos][1] === table.rowsCols-1) && (snake.direction === "down")) ||  ((snake.position[headPos][1] === 0) && (snake.direction === "up"))) {
-    // console.log("border hit");
+    // console.log("border hit"); dus dood
     stopp();
   }
 }
 
-// checks self contact
+// wat gebeurt er als de snake zichzelf aanraakt? (dood)
+
 function hitSnake() {
   var headPos = snake.position.length-1;
   for (var i=0; i<headPos; i++) {
     if (snake.position[headPos].toString() === snake.position[i].toString()) {
-      // console.log("snake hit");
+      // console.log("snake hit"); dus dood
       stopp();
     }
   } 
 }
 
-// checks food contact
+// wat gebeurt er als de snake food pakt (wordt elke keer 1 blokje langer)
+
 function hitFood() {
   var head = snake.position[snake.position.length-1];
   var tail = snake.position[0];
@@ -135,11 +150,11 @@ function hitFood() {
     boxes[random].classList.remove("food");
     snake.position.unshift(tail);
     randomFood();
-     //snake.food++;
+     //snake.food++; dus na elke food krijg je +1 bij je score
     snake.score += snake.food;
     scoreElt.innerHTML = snake.score + " pts";
-    // increase speed
-    clearInterval(setInt);
+    // na elk stukje food wordt de snelheid hoger en hoger
+        clearInterval(setInt);
     snake.interval = snake.interval - snake.interval/40;
     setInt = setInterval(function() {
       move();
@@ -147,12 +162,12 @@ function hitFood() {
   }
 }
 
-// random 'food'
+// random 'food' dus dat er random ergens op het veld food komt
 function randomFood() {
   var randomX = Math.floor(Math.random() * table.rowsCols);
   var randomY = Math.floor(Math.random() * table.rowsCols);
   random = randomX + randomY * table.rowsCols;
-  // picks another foodPos if food pops on snake
+  // er komt een andere food tevoorschijn wanneer de vorige food wordt gepakt door de snake
   while (boxes[random].classList.contains("snake")) {
     randomX = Math.floor(Math.random() * table.rowsCols);
     randomY = Math.floor(Math.random() * table.rowsCols);
@@ -162,33 +177,33 @@ function randomFood() {
   foodPos = [randomX, randomY];
 }
 
-// read positions and render the snake
+// het aflezen van de snake positie
 function renderSnake() {
   for (var i=0; i<snake.position.length; i++) {
     boxes[snake.position[i][0] + snake.position[i][1] * table.rowsCols].classList.add("snake");
   }
 }
 
-// keypress handling to turn
+// keypress handelingen
 function turn(e) {
   if (snake.canTurn) {
     switch (e.keyCode) {
       case 13:
         // document.removeEventListener()
         break;
-      case 37:// left
+      case 37:// links
         if (snake.direction === "right") return;
         snake.direction = "left";
         break;
-      case 38:// up
+      case 38:// boven
         if (snake.direction === "down") return;
         snake.direction = "up";
         break;
-      case 39:// right
+      case 39:// rechts
         if (snake.direction === "left") return;
         snake.direction = "right";
         break;
-      case 40:// down
+      case 40:// beneden
         if (snake.direction === "up") return;
         snake.direction = "down";
         break;
@@ -199,10 +214,10 @@ function turn(e) {
   }
 }
 
-// table creation
+// speelveld 
 function tableCreation() {
   if (snakeTable.innerHTML === "") {
-    // main table
+    
     for (var i = 0; i<table.boxes; i++) {
       var divElt = document.createElement("div");
       divElt.classList.add("box");
@@ -221,7 +236,7 @@ function tableCreation() {
 
 
 
-// swipe Showcase
+
 $("document").ready(function() {
   $("body")
     .swipeDetector()
@@ -243,31 +258,30 @@ $("document").ready(function() {
     });
 });
 
-// swipe function --> credit: https://codepen.io/AlexEmashev/pen/BKgQdx?editors=0100
+// swipe functie
 (function($) {
   $.fn.swipeDetector = function(options) {
-    // States: 0 - no swipe, 1 - swipe started, 2 - swipe released
+    // Status: 0 - geeb swipe, 1 - swipe begint, 2 - swipe komt uit
     var swipeState = 0;
-    // Coordinates when swipe started
+    // Coordinaten wanneer swipe begint
     var startX = 0;
     var startY = 0;
-    // Distance of swipe
+    // Afstand van swipe
     var pixelOffsetX = 0;
     var pixelOffsetY = 0;
-    // Target element which should detect swipes.
+    // Element wat swipes moet detecteren
     var swipeTarget = this;
     var defaultSettings = {
-      // Amount of pixels, when swipe don't count.
+      // aantal pixels wanneer swipe niet telt.
       swipeThreshold: 30,
-      // Flag that indicates that plugin should react only on touch events.
-      // Not on mouse events too.
+      
       useOnlyTouch: true
     };
 
-    // Initializer
+    
     (function init() {
       options = $.extend(defaultSettings, options);
-      // Support touch and mouse as well.
+      
       swipeTarget.on("mousedown touchstart", swipeStart);
       $("html").on("mouseup touchend", swipeEnd);
       $("html").on("mousemove touchmove", swiping);
@@ -293,14 +307,14 @@ $("document").ready(function() {
           Math.abs(pixelOffsetX) > Math.abs(pixelOffsetY) &&
           Math.abs(pixelOffsetX) > options.swipeThreshold
         ) {
-          // Horizontal Swipe
+          // Horizontaal Swipe
           if (pixelOffsetX < 0) {
             swipeTarget.trigger($.Event("swipeLeft.sd"));
           } else {
             swipeTarget.trigger($.Event("swipeRight.sd"));
           }
         } else if (Math.abs(pixelOffsetY) > options.swipeThreshold) {
-          // Vertical swipe
+          // Vertikaal swipe
           if (pixelOffsetY < 0) {
             swipeTarget.trigger($.Event("swipeUp.sd"));
           } else {
@@ -311,7 +325,7 @@ $("document").ready(function() {
     }
 
     function swiping(event) {
-      // If swipe don't occuring, do nothing.
+      // als swipe niet voorkomt, doe niks!!
       if (swipeState !== 1) return;
 
       if (event.originalEvent.touches) {
@@ -331,6 +345,6 @@ $("document").ready(function() {
       }
     }
 
-    return swipeTarget; // Return element available for chaining.
+    return swipeTarget; 
   };
 })(jQuery);

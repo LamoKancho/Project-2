@@ -10,9 +10,12 @@ body{
 
 }
 
-#all{
+.all{
     display: flex;
     justify-content: center;
     align-content: center;
-    flex-direction: column;
+    /* flex-direction: column; */
+}
+.foto{
+    margin-left: 32vw;
 }
