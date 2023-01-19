@@ -1,6 +1,6 @@
 body{
     display: flex;
-    background-image: url(img/malenia.webp);
+    background-image: url(img/malenia.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     /* flex-direction: row; */
