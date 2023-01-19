@@ -1,0 +1,54 @@
+/* *{
+ border: solid 3px;
+} */
+.grid-container {
+    display: flex;
+    justify-content: space-between;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 20px;
+    margin-top: 20vh;
+}
+.divpics{
+    height: 50vh;
+    width: 100vw;
+}
+
+#imgmid{
+    width: 35vw;
+}
+img{
+    height: 45vh;
+}
+a{
+    text-align: center;
+}
+body{
+    background-image: url("img/minecraftback.jpg");
+    background-repeat: none;
+    background-size: cover;
+
+}
+a:link {
+    font-size: 2rem;
+    font-weight: bolder;
+    color: red;
+    background-color: transparent;
+    text-decoration: none;
+  }
+  
+  a:visited {
+    color: red;
+    background-color: transparent;
+    text-decoration: none;
+  }
+  
+  a:hover {
+    color: #f1f1f1;
+    background-color: transparent;
+    text-decoration: none;
+  }
+  
+  a:active {
+    color: red;
+    background-color: transparent;
+    text-decoration: none;}
