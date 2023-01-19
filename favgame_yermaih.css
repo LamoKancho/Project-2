@@ -24,12 +24,13 @@ body{
 .favmid{
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
+    /* justify-content: space-evenly; */
     /* align-content: center; */
     /* align-items: center; */
     height: 100vh;
     width: 100vw;
-    
+    color: black;
+    margin-top: 30vh;
 }
 .favextraright{
     display: flex;
@@ -51,4 +52,7 @@ body{
 .favextra2 {  
     height: 30vh;
     width: 30vw;    
+}
+h1{
+    font-weight: bold;
 }
