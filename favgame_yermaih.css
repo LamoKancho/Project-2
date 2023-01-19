@@ -1,42 +1,58 @@
 body{
     display: flex;
-    background-image: url(img/malenia.webp);
+    background-image: url(img/malenia.jpg);
     background-size: cover;
     background-repeat: no-repeat;
-    flex-direction: row;
-    justify-content: center;
-    align-content: center ;
-    height: 97vh;
-    width: 98vw;
-}
-#fav{
-    /* display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-content: center ; */
-    height: 50vh;
-    width: 40vw;
-}
-.favextra1{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-content: center ;
-    justify-content: space-between;
-
+    /* flex-direction: row; */
+    /* justify-content: space-evenly; */
+    /* align-content: center ; */
     height: 100vh;
     width: 100vw;
+    margin-top: -0vh;
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+.favextraleft{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    /* align-content: left; */
+    height: 100vh;
+    width: 100vw;
+    margin-left: 2vw;
+}
+.favmid{
+    display: flex;
+    flex-direction: column;
+    /* justify-content: space-evenly; */
+    /* align-content: center; */
+    /* align-items: center; */
+    height: 100vh;
+    width: 100vw;
+    color: black;
+    margin-top: 30vh;
+}
+.favextraright{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    /* align-content: center; */
+    height: 100vh;
+    width: 100vw;
+    margin-right: 2vw;
+}
+#fav{
+    height: 40vh;
+    width: 30vw;
 }
 .favextra {  
-    height: 50vh;
+    height: 30vh;
     width: 30vw;    
 }
-.favextra2{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-content: center;
-    justify-content: space-between;
-    /* height: 50vh;
-    width: 30vw; */
+.favextra2 {  
+    height: 30vh;
+    width: 30vw;    
+}
+h1{
+    font-weight: bold;
 }
