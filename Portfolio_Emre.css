@@ -15,10 +15,13 @@ img {
 
 }
 
-#all{
+.all{
     display: flex;
     justify-content: center;
     align-content: center;
-    flex-direction: column;
+    /* flex-direction: column; */
+}
+.foto{
+    margin-left: 32vw;
 }
 >>>>>>> 92446088c1c932a0e75e23c5424a5aeff204ae0c

@@ -18,7 +18,7 @@
 	text-align: center;
   }
   
-  /* title */
+  /* titel */
   header {
 	text-align: center;
 	font-size: 32px;
@@ -27,7 +27,7 @@
 	color: rgb(255, 255, 255);
   }
   
-  /* main table */
+  /* speelveld */
   .snakeTable {
 	width: 210px;
 	height: 230px;
@@ -45,7 +45,7 @@
 	}
   }
   
-  /* all boxes in the table */
+  /* alle boxen in het speelveld */
   .box {
 	background: rgba(70, 9, 255, 0.709);
 	border: solid 1px #fcfcfc00;
@@ -67,7 +67,7 @@
 	background: #dbd10a;
   }
   
-  /* bar showing status below table */
+  /* bar die status weergeeft */
   .status {
 	background: rgb(147, 13, 13);
 	color: #27039d;
@@ -99,7 +99,7 @@
 	display: none !important;
   }
   
-  /* modular window before and after game */
+  /* scgerm voor en na de game */
   .modul {
 	display: flex;
 	flex-direction: column;
