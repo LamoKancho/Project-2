@@ -1,0 +1,53 @@
+*{
+    margin: 0%;
+    padding: 0%
+}
+
+#uitleg{
+    display: flex;
+    align-content: center;
+    justify-content: center;
+}
+
+#fg{
+    display: flex;
+    align-content: center;
+    justify-content: center;
+}
+
+body{
+    background-image: Url(https://static1.srcdn.com/wordpress/wp-content/uploads/2022/02/Dread-Hunger-Review-A-PVP-Survival-Game-Thats-Equal-Parts-Brutal-and-Creative-crew-on-mountain-and-game-logo.jpg);
+    background-repeat: none;
+    background-size: cover;
+   
+    
+}
+
+h1 {
+    display: flex;
+    justify-content: center;
+    color: black;
+    font-weight: bold;
+}
+p{
+    display: flex;
+    color: darkblue;
+    font-weight: bold;
+    justify-content: center;
+}
+#dh1 {
+    width: 30vw;
+    height: 89vh;
+}
+
+
+#dh2 {
+    width: 30vw;
+    height: 89vh;
+}
+
+#uitlegfoto {
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+}
