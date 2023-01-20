@@ -3,7 +3,8 @@ img{
     height: 42.4vw;
 }
 h1{
-    width: 50vw;
+    margin-left: 30vw;
+    width: 30vw;
     background-image:url("img/PortfolioFotoEmbiya2.png") ;
     background-size: cover;
     background-repeat: no-repeat;
