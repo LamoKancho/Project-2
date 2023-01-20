@@ -1,8 +1,8 @@
 //snelheid van knuckle
-let move_speed = 5;
+let move_speed = 8;
 	
 //gravity van knuckle
-let gravity = 0.12;
+let gravity = 0.10;
 	
 
 let bird = document.querySelector('.bird');
