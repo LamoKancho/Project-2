@@ -60,18 +60,31 @@
     </ul>
   </div>
 </header><br><br>
-<body><br>  
+<body><br>  <br>
 <!-- class="game" onload="beginscreen()"   -->
+<section class="canvas">
     <canvas width="750" height="585" id="game"></canvas>
+    <!-- <canvas width="1000" height="700" id="game"></canvas> -->
+  </section>
+    
     <div id="speler1"></div>
     <div id="speler2"></div>
-    <div class="message">
-      
+    <div id="message1" class="message">
+      druk op enter om te beginnen.<br><br>
+    </div>
+    <div id="message" class="message">
       welkom bij mijn game. Dit spel  heet pong, hier sla je een bal heen en weer tot dat iemand een goal scoord.
-      de controls zijn simpel, speler 1 gebruikt W/S en speler 2 gebruikt PGUP/PGDN.
-  </div>
+      de controls zijn simpel, speler 1 gebruikt W/S en speler 2 gebruikt pijltjes omhoog/pijltjes omlaag.
+    </div>
+      <div id="message2" class="message">
+        have fun
+      </div>
+      <div id="message3" class="message">
+      (ps let niet op waarom het spel helemaal rechts is, dat is door die menu. Ik weet ook niet waarom het dat doet.)
+      </div>
     <div class="score">
         <span class="score_title"></span>
+        <span class="player"></span>
         <span class="score_val"></span>
         <span class="score_val2"></span>
    </div>

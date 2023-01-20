@@ -82,3 +82,27 @@ h1{
     width: 10vw;
     height: 3vh;
 } */
+a:link {
+    font-size: 2rem;
+    font-weight: bolder;
+    color: red;
+    background-color: transparent;
+    text-decoration: none;
+  }
+  
+  a:visited {
+    color: blue;
+    background-color: transparent;
+    text-decoration: none;
+  }
+  
+  a:hover {
+    color: #f1f1f1;
+    background-color: transparent;
+    text-decoration: none;
+  }
+  
+  a:active {
+    color: red;
+    background-color: transparent;
+    text-decoration: none;}

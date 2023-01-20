@@ -5,8 +5,8 @@ const grid = 15;
 const paddleHeight = grid * 5; // 80
 const maxPaddleY = canvas.height - grid - paddleHeight;
 
-var paddleSpeed = 6;
-var ballSpeed = 5;
+let paddleSpeed = 6;
+let ballSpeed = 5;
 // let puntpunt = ':'
 // let score1 = 0;
 // let score2 = 0;
@@ -18,38 +18,51 @@ let score_val =
 let score_val2 =
 	document.querySelector('.score_val2');  
 let message =
-	document.querySelector('.message');
+	document.querySelector('#message');
+let message1 =
+	document.querySelector('#message1');
+let message2 =
+	document.querySelector('#message2');
+let message3 =
+	document.querySelector('#message3');
+let menu =
+	document.querySelector('header');
 let score_title =
 	document.querySelector('.score_title');
+let gameding =
+  document.querySelector('.canvas');
+let player = 
+  document.querySelector('.player');
 
 const leftPaddle = {
-  // start in the middle of the game on the left side
+  // start het spel links van het veld
   x: grid * 2,
   y: canvas.height / 2 - paddleHeight / 2,
   width: grid,
   height: paddleHeight,
 
-  // paddle velocity
+  // peddel snelheid
   dy: 0
 };
 const rightPaddle = {
-  // start in the middle of the game on the right side
+  // start het spel rechts van het veld
   x: canvas.width - grid * 3,
   y: canvas.height / 2 - paddleHeight / 2,
   width: grid,
   height: paddleHeight,
 
-  // paddle velocity
+  // peddel snelheid
   dy: 0
 };
 const ball = {
-  // start in the middle of the game
-  x: canvas.width / 2,
+  // start in het midden van het veld
+  x: canvas.width / 2,  
   y: canvas.height / 2,
   width: grid,
   height: grid,
 
-  // keep track of when need to reset the ball position
+  
+  // houd in de gaten wanneer de ball gereset moet worden
   resetting: false,
 
   // ball velocity (start going to the top-right corner)
@@ -92,8 +105,9 @@ function start() {
   }
 
   // draw paddles
-  context.fillStyle = 'white';
+  context.fillStyle = 'blue';  
   context.fillRect(leftPaddle.x, leftPaddle.y, leftPaddle.width, leftPaddle.height);
+  context.fillStyle = 'red';
   context.fillRect(rightPaddle.x, rightPaddle.y, rightPaddle.width, rightPaddle.height);
 
   // move ball by its velocity
@@ -142,8 +156,12 @@ function start() {
 
   // check to see if ball collides with paddle. if they do change x velocity
   if (collides(ball, leftPaddle)) {
+    context.fillStyle = 'blue';  
+    context.fillRect(ball.x, ball.y, ball.width, ball.height);
     ball.dx *= -1;
     ballSpeed + 5;
+    ballSpeed + 0.1;
+    
 
     // move ball next to the paddle otherwise the collision will happen again
     // in the next frame
@@ -152,16 +170,20 @@ function start() {
   else if (collides(ball, rightPaddle)) {
     ball.dx *= -1;
     ballSpeed + 5;
+    ballSpeed + 0.1;
+    context.fillStyle = 'red';  
+    context.fillRect(ball.x, ball.y, ball.width, ball.height);
     // move ball next to the paddle otherwise the collision will happen again
     // in the next frame
     ball.x = rightPaddle.x - ball.width;
   }
 
   // draw ball
+  context.fillStyle = 'purple';
   context.fillRect(ball.x, ball.y, ball.width, ball.height);
 
   // draw walls
-  context.fillStyle = 'lightgrey';
+  context.fillStyle = 'black';
   context.fillRect(0, 0, canvas.width, grid);
   context.fillRect(0, canvas.height - grid, canvas.width, canvas.height);
 
@@ -209,14 +231,22 @@ document.addEventListener("keydown", function(e){
     if (e.which === 13){
         requestAnimationFrame(start);
         message.innerHTML = '';
-        score_title.innerHTML = 'Score', score_val.innerHTML, score_val2.innerHTML;
+        message1.innerHTML = '';
+        message2.innerHTML = '';
+        message3.innerHTML = '';
+        menu.innerHTML = '';
+        score_title.innerHTML = 'Score', player, score_val.innerHTML, score_val2.innerHTML;
+        player.innerHTML = 'p1 p2';
         score_val.innerHTML = '0';
         score_val2.innerHTML = '0';
+        // canvas1.innerHTML = '<canvas width="1000" height="700" id="game"></canvas>';
+        // canvas1.innerHTML = '.canvas{ height: 100vh; width: 100vw;';
+        // gameding.innerHTML = '.canvas{margin-top: 50vh; height: 50vh; padding-right: 50vw;}';
     }
 })
 document.addEventListener("keydown", function(e){
   if (e.which === 13){
-    document.body.style.background = "url('img/gojo-vs-miguel-gojo-jjk0.gif') no-repeat";   
+    document.body.style.background = "url('img/tengen_fight.gif') no-repeat";   
     document.body.style.backgroundSize = "cover";
   }})
 

@@ -1,29 +1,34 @@
-html, body {
-    /* height: 100%; */
-    /* margin: 0; */
-  }
+/* *{
+  border: solid;
+} */
+/* html, body {
+    height: 100%;
+    margin: 0;
+  } */
   .werkevenkutmenu{
     position: sticky;
     margin-top: 0%;
     padding-top: 0%;
-    height: 100vh;
+    height: 104vh;
     /* width: 100vw; */
      
   }
   header{
-    width: 100vw;
+    width: 100%;
   }
   body {
     background: black;
     display: flex; 
     align-items: center;
     justify-content: center;
-    margin-top: 0vh; 
-    background-image: url(img/gojo.gif);
+    margin-top: 2vh; 
+    background-image: url(img/explain.gif);
     background-size:  cover;
     background-repeat: no-repeat;
     height: 100vh;
     width: 99vw;
+    overflow-y: hidden;
+    overflow-x: hidden;
   }
   .gifding{
    
@@ -32,13 +37,18 @@ html, body {
     /* background: black;*/
     display: flex; 
     align-items: center;
-    justify-content: center;
+    /* justify-content: center; */
     /*margin-top: 0vh; 
     background-image: url(img/gojo.gif);
     background-size:  cover;
     background-repeat: no-repeat; */
     height: 100vh;
     width: 99vw; 
+  }
+  .canvas{
+    /* margin-left: 80vw; */
+    /* height: 50vh; */
+    /* padding-right: 50vw; */
   }
   h1{
     /* color: snow;
@@ -58,13 +68,52 @@ html, body {
   position: fixed;
 	z-index: 10;
 	height: 10vh;
-	font-size: 10vh;
+	font-size: 30px;
 	font-weight: 100;
-	color: blue;
-	top: 12vh;
+	color: snow;
+	top: 45vh;
+  width: 100vh;
 	/* left: 10vw; */
 	text-align: center;
   }
+  #message1{
+    position: fixed;
+    z-index: 10;
+    height: 10vh;
+    font-size: 50px;
+    font-weight: 100;
+    color: snow;
+    top: 35vh;
+    /* height: 100vh; */
+    width: 100vh;
+    /* left: 10vw; */
+    text-align: center;
+  }
+  #message2{
+    position: fixed;
+    z-index: 10;
+    height: 10vh;
+    font-size: 50px;
+    font-weight: 100;
+    color: snow;
+    top: 65vh;
+    /* height: 100vh; */
+    width: 100vh;
+    /* left: 10vw; */
+    text-align: center;
+  }
+  #message3{
+    position: fixed;
+    z-index: 10;
+    height: 10vh;
+    font-size: 14px;
+    font-weight: 100;
+    color: snow;
+    top: 80vh;
+    width: 100vh;
+    /* left: 10vw; */
+    text-align: center;
+    }
   .score {
     position: fixed;
     z-index: 10;
@@ -75,10 +124,12 @@ html, body {
     top: 10%;
     left: 0;
   }
-  
   .score_val {
     color: black;
   }
   .score_val2{
     color: black;
+  }
+  .player{
+    
   }
