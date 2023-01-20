@@ -1,0 +1,24 @@
+img{
+    width: 25vw;
+    height: 42.4vw;
+}
+h1{
+    
+    margin-left: 25vw;
+    width: 30vw;
+    /* background-image:url("img/PortfolioFotoEmbiya2.png") ;
+    background-size: cover;
+    background-repeat: no-repeat; */
+}
+
+section{
+    display: flex;
+    flex-direction: row;
+}
+body{
+background-image:url("img/PortfolioFotoEmbiya2.png") ;
+background-size: cover;
+background-size: 60%;
+background-repeat: no-repeat;
+background-position: center;
+}
