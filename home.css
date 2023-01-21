@@ -1,75 +1,59 @@
-/* *{
-    border: solid;
-} */
 header{
     /* position: sticky; */
     height: 80px;
     width: 100%;
 }
+
 body{
     background-image: url(img/janligthartstraat.jpeg);
    background-repeat: no-repeat;
     background-size: cover;
-    /* position: relative; */
-    display: flex;
-    /* flex-direction: row; */
-    /* justify-content: space-between; */
-    /* margin-top: 5vh; */
-    height: 100vh;
-    width: 100vw;
-    overflow-x: hidden;
-    overflow-y: hidden;
 }
-.home{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    height: 100vh;
-    width: 100vw;
-    margin-left: -35%;
-    margin-top: 3vh;
-}
-/* .empty{
-    display: flex;
-    height: 100vh;
-    width: 100vw;
-    padding-left:  ;
-} */
-.home2{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    height: 100vh;
-    width: 100vw;
-    margin-top: 3vh;
-}
-/* .normaal{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-content: center;
-    height: 70vh;
-    width: 100%;
-    background-color: green;
-} */
+
+/*zorgt dat elke foto even groot is*/
 img{
     height: 30vh;
     width: 25vw;
 }
-footer{
-    position: absolute;
-    right: 0;bottom:0;left:0;
+
+/*zorgt dat de twee a elementen naast elkaar komen, margin-left 20% geeft een margin van 20% van de beeldschermgrootte*/
+.eerstetwee{
     display: flex;
-    flex-direction: row;
+    margin-left: 20%;
+    margin-top: 60px;
+}
+
+/*zorgt voor afstand tussen de a element ernaast*/
+.embiya{
+    margin-right: 150px;
+}
+
+/*zorgt dat de twee a elementen naast elkaar komen, margin-left 20% geeft een margin van 20% van de beeldschermgrootte*/
+.laatstetwee{
+    display: flex;
+    margin-left: 20%;
+    margin-top: 60px;
+}
+/*zorgt voor afstand tussen de a element ernaast*/
+.erik{
+    margin-right: 150px;
+}
+
+/* Display flex + justify content zorgt ervoor dat de tekst binnen de footer gecentered word */
+/* Padding zorgt voor 10px ruimte tussen tekst en randen van de footer  */
+/* position: absolute + bottom 0 zorgt dat footer onderaan pagina blijft*/
+/* width 100% zorgt dat footer hele breedte wordt*/
+footer{
+    display: flex;
     justify-content: center;
-    position: fixed;
-    padding-bottom: 1vh;
-    height: 5vh;
-    width: 100vw;
+    padding: 10px;
     background-color: green;
     opacity: 0.8;
-    color: black;
+    position:absolute;
+    bottom:0;
+    width: 100%;
 }
+
 
 h1{
     padding-left: 8.9vw;
@@ -89,20 +73,30 @@ a:link {
     background-color: transparent;
     text-decoration: none;
   }
-  
+
   a:visited {
     color: blue;
     background-color: transparent;
     text-decoration: none;
   }
-  
+
   a:hover {
     color: #f1f1f1;
     background-color: transparent;
     text-decoration: none;
   }
-  
+
   a:active {
     color: red;
     background-color: transparent;
     text-decoration: none;}
+
+/*!* .normaal{*/
+/*    display: flex;*/
+/*    flex-direction: row;*/
+/*    justify-content: center;*/
+/*    align-content: center;*/
+/*    height: 70vh;*/
+/*    width: 100%;*/
+/*    background-color: green;*/
+/*} *!*/
