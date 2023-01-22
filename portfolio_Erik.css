@@ -1,4 +1,35 @@
 *{
     margin: 0%;
-    padding: 0%
+    padding: 0%;
 }
+body{
+    background-image: url(https://wallpapercave.com/wp/wp9093097.jpg);
+    background-size: cover;
+    color: lightgoldenrodyellow;
+  font-weight: bold;
+  font-size: larger;
+   
+}
+
+#foto_erik {
+    width: 35vw;
+    height: 89vh;
+}
+
+#uitleg_foto{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+#uitleg {
+    display: flex;
+    flex-direction: column;
+    
+}
+h1{
+display: flex;
+justify-content: center;
+}
+ 
