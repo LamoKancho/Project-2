@@ -6,39 +6,43 @@
     margin: 0;
   } */
   .werkevenkutmenu{
-    position: sticky;
+    /* position: sticky; */
     margin-top: 0%;
     padding-top: 0%;
-    height: 104vh;
+    /* height: 100vh; */
     /* width: 100vw; */
-     
+     /* padding-top: -50%; */
   }
   header{
-    /* width: 100%; */
+    width: 105%;
+    /* height: 50%; */
+    /* top: 0%; */
   }
   body {
     /* background: black; */
     display: flex; 
+    flex-direction: column;
     align-items: center;
-    justify-content: center;
-    margin-top: 2vh; 
+    /* margin-top: 2vh;  */
+    /* padding-top: 2vh; */
     /* background-image: url(img/explain.gif); */
     background-size:  cover;
     background-repeat: no-repeat;
-    height: 100vh;
+    height: 112vh;
     width: 99vw;
-    overflow-y: hidden;
+    /* overflow-y: hidden; */
     overflow-x: hidden;
     /* background-color: #00154f; */
     background-color: black;
   }
   #bal{
     display: flex;
+    position: fixed;
     height: 100vh;
     width: 100vw;
-    margin-left: -40%;
-    
-    margin-top: 28%;
+    margin-left: 130%;
+    /* margin-top: 28%; */
+    margin-top: 15%;
   }
   /* #bal{
     height: 50vh;
@@ -63,10 +67,12 @@
     width: 99vw; 
   }
   .canvas{
+    position: fixed;
     /* margin-left: 10vw; */
     height: 50vh;
     width: 100vw;
-    padding-bottom: 52%;
+    /* padding-bottom: 52%; */
+    /* padding-bottom: 52%; */
     padding-left: 0%;
   }
   .canvas2{
@@ -102,6 +108,13 @@
     height: 50px;
     width: 50px;
   }
+  .scrollable-place {
+    height: 1000px;
+}
+.stop-scrolling {
+    height: 100%;
+    overflow: hidden;
+}
   .message{
   position: fixed;
 	z-index: 10;
@@ -110,7 +123,7 @@
 	font-weight: 100;
 	/* color: #bedbe1; */
   color: #00c0f9;
-	top: 10vh;
+	top: 5vh;
   height: 100%;
   width: 100vh;
 	/* left: 10vw; */
@@ -147,7 +160,7 @@
     0 0 92px #0100c6,
     0 0 102px #0100c6,
     0 0 151px #0100c6;
-    top: 33vh;
+    top: 36vh;
     margin-left: -49%;
     /* height: 100vh; */
     width: 100vw;
@@ -170,7 +183,7 @@
     0 0 92px #0100c6,
     0 0 102px #0100c6,
     0 0 151px #0100c6;
-    top: 42vh;
+    top: 44vh;
     margin-left: -51%;
     /* height: 100vh; */
     width: 100vw;
