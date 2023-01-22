@@ -2,11 +2,7 @@ body{
     background-color: hwb(151 22% 23%);
  
 }
-<<<<<<< HEAD
-img { 
-    
-}
-=======
+
 
 
 #programmeertalen {
@@ -22,6 +18,7 @@ img {
     /* flex-direction: column; */
 }
 .foto{
-    margin-left: 32vw;
+    margin-left: 38vw;
 }
->>>>>>> 92446088c1c932a0e75e23c5424a5aeff204ae0c
+
+
