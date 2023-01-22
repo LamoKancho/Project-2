@@ -29,7 +29,7 @@ body{
     /* align-items: center; */
     height: 100vh;
     width: 100vw;
-    color: black;
+    color: white;
     margin-top: 30vh;
     margin-right: 5vw;
 }
@@ -38,7 +38,7 @@ body{
     flex-direction: column;
     justify-content: space-between;
     /* align-content: center; */
-    height: 100vh;
+    height: 1000vh;
     width: 100vw;
     margin-right: 2vw;
 }
