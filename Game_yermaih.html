@@ -13,67 +13,105 @@
 </head>
 
 <header class="werkevenkutmenu">
-  <div class="menu-bar">
-    <ul>
-
-      <li><a href="Homepage.html">Home</a></li>
-      <li><a href="Game_Embiya.html">Embiya <i class="fas fa-caret-down"></i></a>
+  <section class="menu">
+    <div class="menu-bar">
+      <ul>
+  
+        <li><a href="Homepage.html">Home</a></li>
+        <li><a href="Game_Embiya.html">Embiya <i class="fas fa-caret-down"></i></a>
+            <div class="dropdown-menu">
+                <ul>
+                  <li><a href="#">Portfolio</a></li>
+                  <li><a href="#">Favoriete games</a></li>
+                  <li><a href="Game_Embiya.html">Game</a></li>
+                </ul>
+              </div>
+        </li>
+        
+        <li><a href="#">Emre <i class="fas fa-caret-down"></i></a>
           <div class="dropdown-menu">
               <ul>
                 <li><a href="#">Portfolio</a></li>
                 <li><a href="#">Favoriete games</a></li>
-                <li><a href="Game_Embiya.html">Game</a></li>
+                <li><a href="#">Game</a></li>
               </ul>
             </div>
       </li>
-      
-      <li><a href="#">Emre <i class="fas fa-caret-down"></i></a>
+  
+      <li><a href="Game_Erik.html">Erik <i class="fas fa-caret-down"></i></a>
         <div class="dropdown-menu">
             <ul>
               <li><a href="#">Portfolio</a></li>
               <li><a href="#">Favoriete games</a></li>
-              <li><a href="#">Game</a></li>
+              <li><a href="Game_Erik.html">Game</a></li>
             </ul>
           </div>
     </li>
-
-    <li><a href="Game_Erik.html">Erik <i class="fas fa-caret-down"></i></a>
+  
+    <li><a href="yermaihhome.html">Yermaih<i class="fas fa-caret-down"></i></a>
       <div class="dropdown-menu">
           <ul>
-            <li><a href="#">Portfolio</a></li>
+            <li><a href="port_yermaih.html">Portfolio</a></li>
             <li><a href="#">Favoriete games</a></li>
-            <li><a href="Game_Erik.html">Game</a></li>
+            <li><a href="Game_yermaih.html">Game</a></li>
           </ul>
         </div>
-  </li>
-
-  <li><a href="yermaihhome.html">Yermaih<i class="fas fa-caret-down"></i></a>
-    <div class="dropdown-menu">
-        <ul>
-          <li><a href="port_yermaih.html">Portfolio</a></li>
-          <li><a href="#">Favoriete games</a></li>
-          <li><a href="Game_yermaih.html">Game</a></li>
-        </ul>
-      </div>
-    </li>
-
-    </ul>
-  </div>
+      </li>
+  
+      </ul>
+    </div>
+  </section>
 </header><br><br>
-<body><br>  
+<body ><br><br>
+  
+  <!-- onload="gamevid()" -->
+  <!-- <section  class="canvas2">
+    <canvas2 width="" height="" id="gamevid"></canvas2>
+  </section> -->
 <!-- class="game" onload="beginscreen()"   -->
-    <canvas width="750" height="585" id="game"></canvas>
-    <div id="speler1"></div>
-    <div id="speler2"></div>
-    <div class="message">
-      
-      welkom bij mijn game. Dit spel  heet pong, hier sla je een bal heen en weer tot dat iemand een goal scoord.
-      de controls zijn simpel, speler 1 gebruikt W/S en speler 2 gebruikt PGUP/PGDN.
-  </div>
+<section class="canvas">
+    <!-- <canvas width="750" height="585" id="game"></canvas> -->
+    <canvas width="1500" height="740" id="game"></canvas>
+    <!-- <canvas width="1500" height="500" id="game"></canvas> -->
+  </section>
+    
+    <!-- <div id="speler1"></div>
+    <div id="speler2"></div> -->
+    <div id="bal">
+      <h1 class="balpic">
+      <!-- <img id="bal" src="img/bal.png" alt=""> -->
+      <!-- <img id="bal" src="img/balgif.gif" alt=""> -->
+      <!-- <img id="bal" src="img/balgif2.gif" alt=""> -->
+      <!-- <img id="bal" src="img/balgif2.1.gif" alt=""> -->
+      <img onclick="gifaway()" id="balpicmain" src="img/pongvid.gif" alt="">
+    </h1>
+    </div>
+    <div id="message" class="message">
+      Welkom bij mijn game. Dit spel heet pong,<br> hier sla je een bal heen en weer tot dat iemand een punt scoort.
+      De besturingen zijn simpel: <br>
+      *Druk met de linkermuisknop op de foto/gif om het weg te halen. <br>
+      *scrol nu naar beneden als je de menu weg wilt hebben. <br>
+      *Druk <button onclick="disableScroll()" >hier</button> om de scrolwiel weg te halen. <br>
+      *Speler 1 gebruikt de W/S toetsen. <br>*Speler 2 gebruikt pijltoets omhoog/-omlaag.
+    </div>
+    <div id="message1" class="message">
+      Druk op enter om te beginnen.<br><br>
+    </div>
+      <div id="message2" class="message">
+        Have fun.
+      </div>
+      <!-- <div id="message3" class="message">
+      (ps let niet op waarom het spel helemaal rechts is, dat is door die menu. Ik weet ook niet waarom het dat doet.)
+      </div> -->
+      <!-- <div id="message4" class="message">
+        let hier niet op
+        </div> -->
     <div class="score">
         <span class="score_title"></span>
-        <span class="score_val"></span>
-        <span class="score_val2"></span>
+        <span class="playerl"></span>
+        <span class="playerr"></span><br>
+        <span class="score_val"></span> <span class="score_val2"></span>
+        <!-- <span class="score_val" id="score_val1" id="score_val2"></span> -->
    </div>
     <!-- <div id="bg2"> <img src="img/gojo-vs-miguel-gojo-jjk0.gif"> </div> -->
     <script src="Game_yermaih.js"></script>

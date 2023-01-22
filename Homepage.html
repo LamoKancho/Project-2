@@ -17,8 +17,8 @@
       <li><a href="Embiya_Homepage.html">Embiya <i class="fas fa-caret-down"></i></a>
           <div class="dropdown-menu">
               <ul>
-                <li><a href="#">Portfolio</a></li>
-                <li><a href="#">Favoriete games</a></li>
+                <li><a href="Embiya_Portfolio.html">Portfolio</a></li>
+                <li><a href="favgame_Embiya.html">Favoriete games</a></li>
                 <li><a href="Game_Embiya.html">Game</a></li>
               </ul>
             </div>
@@ -27,9 +27,9 @@
       <li><a href="emrehome_html.html">Emre <i class="fas fa-caret-down"></i></a>
         <div class="dropdown-menu">
             <ul>
-              <li><a href="#">Portfolio</a></li>
-              <li><a href="#">Favoriete games</a></li>
-              <li><a href="#">Game</a></li>
+              <li><a href="Portfolio_Emre.html">Portfolio</a></li>
+              <li><a href="favgame_Emre.html">Favoriete games</a></li>
+              <li><a href="Game_Emre.html">Game</a></li>
             </ul>
           </div>
     </li>
@@ -37,8 +37,8 @@
     <li><a href="Erik_Homepage.html">Erik <i class="fas fa-caret-down"></i></a>
       <div class="dropdown-menu">
           <ul>
-            <li><a href="#">Portfolio</a></li>
-            <li><a href="#">Favoriete games</a></li>
+            <li><a href="portfolio_Erik.html">Portfolio</a></li>
+            <li><a href="FavGameErik.html">Favoriete games</a></li>
             <li><a href="Game_Erik.html">Game</a></li>
           </ul>
         </div>
@@ -57,9 +57,12 @@
     </ul>
   </div>
 </header>
+
 <body>
-  <section class="home">
-    <a href="Embiya_Homepage.html">
+
+<!--Hier heb ik een div gemaakt zodat ik op de div display flex kon aanroepen zodat de twee a elementen naast elkaar komen -->
+<div class="eerstetwee">
+    <a class="embiya" href="Embiya_Homepage.html">
         <img src="img/Whack-A-Mole.jpg"> <br>
         <h1>Embiya</h1>
     </a>
@@ -68,38 +71,30 @@
         <img src="img/Snake.jpg"><br>
         <h1>Emre</h1>
     </a>
-  </section>
-  <!-- <section class="empty">
+</div>
 
-  </section> -->
-  <section class="home2">
-    <a href="Erik_Homepage.html">
+<!--Hier heb ik hetzelfde gedaan, op deze manier heb ik twee divs met twee a elementen naast elkaar binnen de div. de divs zelf staan onder elkaar
+    zo krijg je de 4 a elementen in een vierkantje -->
+<div class="laatstetwee">
+    <a class="erik" href="Erik_Homepage.html">
         <img src="img/flappy.png"><br>
         <h1>Erik</h1>
-        </a>
+    </a>
 
-      <a href="" class="a">
-          <img src="img/ping-pong.jpeg" ><br>
-          <h1>Yermaih</h1>
-          </a>
-          
-        </section>
-      <!-- <section class="normaal">
-    <H1>Welkom bij onze gameproject, hier kunt u zien wat wij als een groep en apart allemaal gedaan hebben.
-      via de namen hierboven kunt u zien wat die persoon allemaal heeft gedaan.
-    </H1> <br>
-    <p1></p1>
-</section> -->
-    
+    <a href="" class="a">
+        <img src="img/ping-pong.jpeg"><br>
+        <h1>Yermaih</h1>
+    </a>
+</div>
 </body>
 <footer>
-  <p>
-    Bij het maken van dit project hebben we JavaScript,PHP,HTML en CSS gebruikt. <br>
-      Yermaih Waterfort,
-      Emre Bas,
-      Erik van der Wiel,
-      Embiya Gürses, 
-     Copyright &#169
-  </p>
+    <p>
+        Bij het maken van dit project hebben we JavaScript, HTML en CSS gebruikt. <br>
+        Embiya Gurses,
+        Emre Bas,
+        Erik van der Wiel,
+        Yermaih Waterfort
+        Copyright &#169
+    </p>
 </footer>
 </html>
