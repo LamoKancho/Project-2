@@ -101,7 +101,7 @@
 	display: none !important;
   }
   
-  /* scgerm voor en na de game */
+  /* scherm voor en na de game */
   .modul {
 	display: flex;
 	flex-direction: column;

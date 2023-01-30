@@ -261,7 +261,7 @@ $("document").ready(function() {
 // swipe functie
 (function($) {
   $.fn.swipeDetector = function(options) {
-    // Status: 0 - geeb swipe, 1 - swipe begint, 2 - swipe komt uit
+    // Status: 0 - geen swipe, 1 - swipe begint, 2 - swipe komt uit
     var swipeState = 0;
     // Coordinaten wanneer swipe begint
     var startX = 0;
